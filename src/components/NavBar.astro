@@ -1,0 +1,116 @@
+---
+
+---
+
+<header class="shadow-sm fixed w-screen bg-zinc-50 top-0 z-[60]">
+    <nav
+      class="max-w-screen-lg h-16 flex flex-row mx-auto justify-between items-center"
+    >
+      <div class="logo">
+        <a href="/">
+          <img
+            src="/Logo.png"
+            width="40px"
+            height="40px"
+            alt="Logo de Kanalete"
+          />
+        </a>
+      </div>
+  
+      <!-- Menu para moviles -->
+      <div class="menu-icon md:hidden text-neutral-200">
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </div>
+  
+      <!-- Menu desplegable -->
+      <ul
+        class="absolute flex bg-zinc-200 top-16 left-0 p-5 rounded-b-md w-full flex-col gap-4 shadow-lg hidden md:hidden"
+      >
+        <li><a class="hover:text-green-800 activado" href="/">Inicio</a></li>
+        <li><a class="hover:text-green-800" href="/nosotros">Nosotros</a></li>
+        <li><a class="hover:text-green-800" href="/serv">Servicios</a></li>
+        <li><a class="hover:text-green-800" href="/blog">Blog</a></li>
+      </ul>
+  
+      <!-- Menu para escritorio -->
+      <ul class="gap-6 hidden md:flex h-full items-center">
+        <li class="h-full">
+          <a
+            class="h-full items-center flex hover:text-green-800 hover:border-b-4 hover:border-green-800 text-green-600 activado"
+            href="/">Inicio</a>
+        </li>
+        <li class="h-full">
+          <a
+            class="h-full items-center flex hover:text-green-800 hover:border-b-4 hover:border-green-800 text-green-600"
+            href="/nosotros">Nosotros</a>
+        </li>
+        <li class="h-full">
+          <a
+            class="h-full items-center flex hover:text-green-800 hover:border-b-4 hover:border-green-800 text-green-600"
+            href="/servicios">Servicios</a>
+        </li>
+        <li class="h-full">
+            <a
+              class="h-full items-center flex hover:text-green-800 hover:border-b-4 hover:border-green-800 text-green-600"
+              href="/blog">Blog</a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <style>
+    ul li a {
+      transition: 0.5s;
+    }
+  
+    ul li a:hover {
+      color: var(--verdecito);
+      /* box-shadow: 0 0 5px #ffee10; */
+      text-shadow: 0 0 1px rgb(13 148 136);
+    }
+  
+    .activado {
+      color: var(--verdecito) !important;
+      /* box-shadow: 0 0 5px #ffee10; */
+      text-shadow: 0 0 1px rgb(13 148 136) !important;
+    }
+  </style>
+  
+  <script is:inline>
+      const menuIcon = document.querySelector(".menu-icon");
+      const menu = document.querySelector("ul");
+    
+      menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        console.log("click");
+      });
+  
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        header.classList.toggle("shadow-sm", window.scrollY > 0);
+      });
+  
+      // Link active
+      const links = document.querySelectorAll("ul li a");
+      links.forEach((link) => {
+        //validar url
+        if (link.href === window.location.href || link.href === window.location.href + "/") {
+          link.classList.add("activado");
+        }else if (window.location.href.includes("post") && link.href.includes("blog")) {
+          link.classList.add("activado");
+        }else{
+          link.classList.remove("activado");
+        }
+      });
+  </script>
