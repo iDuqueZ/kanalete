@@ -22,8 +22,8 @@ export default function PlanesDestacados() {
 
     return (
         <div className="relative">
-            <div className="absolute -top-20 -right-2 -z-10">
-                <img src="/fondo2.png" alt="Fondo" className="w-80 h-80 object-cover" />
+            <div className="absolute -top-16 md:-top-24 right-0 -z-10">
+                <img src="/fondo2.png" alt="Fondo" className="w-60 h-60 md:w-80 md:h-80 object-cover" />
             </div>
 
             <h2 className="text-xl font-semibold text-zinc-800 mb-4 max-w-screen-lg mx-auto px-5 md:px-0">
@@ -44,7 +44,7 @@ export default function PlanesDestacados() {
             </div>
             
             <div className="absolute -bottom-40 left-0 -z-10">
-                <img src="/fondo1.png" alt="Fondo" className="w-80 h-80 object-cover" /> 
+                <img src="/fondo1.png" alt="Fondo" className="w-60 h-60 md:w-80 md:h-80 object-cover" /> 
             </div>
         </div>
     );
