@@ -41,7 +41,7 @@ export default function noticias() {
 
   return (
     <>
-        <h2 class="text-xl font-semibold text-zinc-800 mb-4">
+        <h2 className="text-xl font-semibold text-zinc-800 mb-4">
             Noticias destacadas:
         </h2>
       <Swiper pagination={true} navigation={true} loop={true} modules={[Pagination, Autoplay, Navigation]} 

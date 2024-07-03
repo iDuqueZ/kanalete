@@ -1,0 +1,255 @@
+<section>
+  <div class="parent mt-10">
+    <div data-glow class="div1">
+      <div>
+        <h3
+          class="text-cyan-600 inline-block"
+        >
+          Exploración del Pacífico Colombiano
+        </h3>
+        <h4>Descubre la Magia del Pacífico</h4>
+      </div>
+      <p>
+        Sumérgete en la belleza natural del Pacífico Colombiano con nuestras
+        excursiones únicas. Desde playas paradisíacas hasta selvas exuberantes,
+        vive una experiencia inolvidable en cada rincón.
+      </p>
+    </div>
+    <div data-glow class="div2">
+      <div>
+        <h3
+          class="text-pink-600 inline-block pr-4"
+        >
+          Aventura y Diversión
+        </h3>
+        <h4>Aventuras para Todos</h4>
+      </div>
+      <p>
+        Ofrecemos actividades para todos los gustos: buceo, senderismo,
+        avistamiento de ballenas, y mucho más. ¡Atrévete a vivir la emoción y la
+        adrenalina en un entorno natural espectacular!
+      </p>
+    </div>
+    <div data-glow class="div3">
+      <div>
+        <h3
+          class="text-orange-500 inline-block pr-4"
+        >
+          Cultura y Tradición
+        </h3>
+        <h4>Descubre la Riqueza Cultural</h4>
+      </div>
+      <p>
+        En Kanalete, valoramos y promovemos la riqueza cultural del Pacífico y
+        del mundo. Participa en actividades y eventos que te acercarán a las
+        tradiciones y costumbres locales, enriqueciendo tu experiencia de viaje.
+      </p>
+    </div>
+    <div data-glow class="div4">
+      <div>
+        <h3
+          class="text-lime-600 inline-block pr-4"
+        >
+          Compromiso con la Naturaleza
+        </h3>
+        <h4>Turismo Sostenible</h4>
+      </div>
+      <p>
+        Nos comprometemos con el cuidado del medio ambiente y la sostenibilidad.
+        Nuestras actividades están diseñadas para minimizar el impacto ecológico
+        y contribuir al bienestar de las comunidades locales.
+      </p>
+    </div>
+    <div data-glow class="div5">
+      <div>
+        <h3
+          class = "text-yellow-500 inline-block pr-4"
+        >
+          Nuestros Valores
+        </h3>
+        <h4>Nuestros Valores Fundamentales</h4>
+      </div>
+      <!-- Transparencia: Actuamos con lealtad, compromiso y verdad para promover la esperanza y la paz.
+        Armonía y Calidad Humana: Buscamos trascender más allá de lo físico, priorizando la espiritualidad y la hermandad.
+        Autenticidad: Mantenemos nuestro enfoque en la misión, buscando siempre nuestra mejor versión y aprendiendo de la competencia.
+        Seguridad y Gestión del Conocimiento: Delegamos y especializamos según capacidades, optimizando tiempo y recursos.
+        Co-Creación: Promovemos el trabajo en equipo dentro y fuera de la organización, fomentando el crecimiento y el bienestar social, ambiental y sociocultural. -->
+      <ul>
+        <li>Cultura Organizacional Armoniosa</li>
+        <li>Transparencia y lealtad</li>
+        <li>Armonía y Calidad Humana</li>
+        <li>Autenticidad</li>
+        <li>Seguridad y Gestión del Conocimiento</li>
+        <li>Co-Creación y Trabajo en equipo</li>
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .parent {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+      }
+      .parent > div {
+        grid-area: auto;
+      }
+    }
+
+    .parent > div {
+      @apply p-4 rounded-md border-[0.5px] border-zinc-200 flex flex-col justify-between text-[0.8rem] relative gap-6;
+    }
+
+    .parent > div p {
+      @apply text-sm;
+    }
+
+    .parent > div ul {
+      @apply list-disc list-inside;
+    }
+
+    .parent > div h3 {
+      @apply text-2xl font-bold bg-white bg-opacity-80 rounded-r-md -ml-4 pl-4 py-2;
+      /* filter: drop-shadow(0 0 0.75rem rgba(12, 31, 0, 0.5)); */
+    }
+
+    .parent > div h4 {
+      @apply text-lg font-semibold;
+    }
+
+    .div1 {
+      grid-area: 1 / 1 / 4 / 4;
+      background-image: url('https://regiones.prisamedia.co/wp-content/uploads/elementor/thumbs/GettyImages-135889862-scaled-q7o48gqkvqorgu3fjssg8ky0yq705q21uequgzl3dk.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+    }
+
+    .div1::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(12, 31, 0, 1), rgba(12, 31, 0, 0.4) 50%, rgba(12, 31, 0, 0));
+      @apply rounded-md;
+    }
+
+    .div1 > div, p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .div2 {
+      grid-area: 1 / 4 / 3 / 7;
+      background-image: url('https://uvn-brightspot.s3.amazonaws.com/assets/vixes/k/kayak-en-pareja.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: white;
+    }
+
+    .div2::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(12, 31, 0, 1), rgba(12, 31, 0, 0.4) 50%, rgba(12, 31, 0, 0));
+      @apply rounded-md;
+    }
+
+    .div2 > div, p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .div3 {
+      grid-area: 4 / 1 / 6 / 4;
+        background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*Ae5hxfpFSzKOhP48o693Ww.jpeg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+    }
+
+    .div3::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgb(12, 31, 0), rgba(12, 31, 0, 0.4) 50%, rgba(12, 31, 0, 0));
+      @apply rounded-md;
+    }
+
+    .div3 > div, p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .div4 {
+      grid-area: 3 / 4 / 6 / 7;
+        background-image: url('/Lastresmarias.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+    }
+
+    .div4::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(12, 31, 0, 1), rgba(12, 31, 0, 0.4) 50%, rgba(12, 31, 0, 0));
+      @apply rounded-md;
+    }
+
+    .div4 > div, p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .div5 {
+      grid-area: 1 / 7 / 6 / 9;
+        background-image: url('https://i.pinimg.com/736x/ce/99/34/ce99341673863c592f759007f0e4ee45.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+    }
+
+    .div5::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(12, 31, 0, 1), rgba(12, 31, 0, 0.4) 50%, rgba(12, 31, 0, 0));
+      @apply rounded-md;
+    }
+
+    .div5 > div, ul {
+      position: relative;
+      z-index: 1;
+    }
+
+
+  </style>
+</section>
