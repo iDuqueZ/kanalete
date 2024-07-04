@@ -34,7 +34,7 @@ export default function App() {
   return (
     <>
       <div className="h-72 sm:h-80 xl:h-96 2xl:h-96">
-      <Carousel slideInterval={5000} leftControl=" " rightControl=" ">
+      <Carousel slideInterval={5000} leftControl=" " rightControl=" " indicators={false}>
         {banners.map((banner, index) => (
           <img key={index} src={banner} alt={`Banner ${index + 1}`} className="w-full h-full object-cover" />
         ))}

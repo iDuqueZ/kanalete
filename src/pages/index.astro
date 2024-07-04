@@ -8,6 +8,7 @@ import PlanesDestacados from '../components/PlanesDestacados.jsx';
 import Experiencias from '../components/Experiencias.astro';
 import Footer from '../components/Footer.astro';
 import Bento from '../components/Bento.astro';
+import Video from '../components/Video.jsx';
 ---
 
 <Layout title="Kanalete | Agencia de Viajes y Turismo">
@@ -16,11 +17,11 @@ import Bento from '../components/Bento.astro';
 		<div class="h-72 sm:h-80 xl:h-96 2xl:h-96 mt-[60px] max-w-screen-2xl mx-auto relative">
 			<Carrusel client:load></Carrusel>
 			<div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex flex-col items-center justify-center">
-				<h1 class="text-white md:text-6xl text-2xl px-5 font-semibold text-center max-w-[800px]">
-					Kanalete Experience <br> <span class="font-normal text-xl md:text-4xl"> Regalando experiencias para toda la vida </span>
+				<h1 class="text-white md:text-6xl text-4xl px-5 font-semibold text-center leading-8 max-w-[800px]">
+					Kanalete Experience <br> <span class="font-normal text-xl leading-none md:text-4xl"> Regalando experiencias para toda la vida </span>
 				</h1>
 				<div>
-					<a href="/servicios" class="bg-lime-600 text-sm md:text-base text-white hover:bg-white hover:text-lime-600 hover:border-lime-600 hover:border-2 box-border hover:box-border ease-in-out duration-300 px-4 py-2 rounded-md mt-8 inline-block font-semibold">
+					<a href="/servicios" class="bg-lime-600 text-sm md:text-base text-white hover:bg-white hover:text-lime-600 hover:border-lime-600 hover:border-2 box-border hover:box-border ease-in-out duration-300 px-4 py-2 rounded-md md:mt-8 mt-4 inline-block font-semibold">
 						Ver servicios
 					</a>
 				</div>
@@ -46,6 +47,10 @@ import Bento from '../components/Bento.astro';
 
 		<section class="max-w-screen-lg mx-auto mt-14 px-5 lg:px-0 h-[120px">
 			<Bento></Bento>
+		</section>
+
+		<section class="max-w-screen-lg mx-auto mt-14 px-5 lg:px-0 h-[120px">
+			<Video client:load></Video>
 		</section>
 
 		<Footer></Footer>
