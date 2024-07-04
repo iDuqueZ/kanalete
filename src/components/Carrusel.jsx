@@ -1,13 +1,3 @@
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-
-// // Import required modules
-// import { Pagination, Autoplay } from 'swiper/modules';
-
 import { Carousel } from "flowbite-react";
 
 // Import axios for API requests
@@ -43,21 +33,7 @@ export default function App() {
 
   return (
     <>
-      {/* <Swiper pagination={true} loop={true} modules={[Pagination, Autoplay]} 
-        autoplay={{
-          delay: 6500,
-          disableOnInteraction: false,
-        }}
-        className="mySwiper">
-        {banners.map((banner, index) => (
-          <SwiperSlide key={index}>
-          <div className='banner-container'>
-            <img className='banner-image' src={banner} alt={`Banner ${index + 1}`} />
-          </div>
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
-      <div className="h-64 sm:h-80 xl:h-96 2xl:h-96">
+      <div className="h-72 sm:h-80 xl:h-96 2xl:h-96">
       <Carousel slideInterval={5000} leftControl=" " rightControl=" ">
         {banners.map((banner, index) => (
           <img key={index} src={banner} alt={`Banner ${index + 1}`} className="w-full h-full object-cover" />

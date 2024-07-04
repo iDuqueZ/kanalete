@@ -13,30 +13,30 @@ import Bento from '../components/Bento.astro';
 <Layout title="Kanalete | Agencia de Viajes y Turismo">
 	<main>
 		<NavBar></NavBar>
-		<div class="h-64 sm:h-80 xl:h-96 2xl:h-96 mt-[60px] max-w-screen-2xl mx-auto relative">
+		<div class="h-72 sm:h-80 xl:h-96 2xl:h-96 mt-[60px] max-w-screen-2xl mx-auto relative">
 			<Carrusel client:load></Carrusel>
 			<div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex flex-col items-center justify-center">
 				<h1 class="text-white md:text-6xl text-2xl px-5 font-semibold text-center max-w-[800px]">
 					Kanalete Experience <br> <span class="font-normal text-xl md:text-4xl"> Regalando experiencias para toda la vida </span>
 				</h1>
 				<div>
-					<a href="/servicios" class="bg-green-500 text-sm md:text-base text-white hover:bg-white hover:text-green-500 hover:border-green-500 hover:border-2 box-border hover:box-border ease-in-out duration-300 px-4 py-2 rounded-md mt-8 inline-block font-semibold">
+					<a href="/servicios" class="bg-lime-600 text-sm md:text-base text-white hover:bg-white hover:text-lime-600 hover:border-lime-600 hover:border-2 box-border hover:box-border ease-in-out duration-300 px-4 py-2 rounded-md mt-8 inline-block font-semibold">
 						Ver servicios
 					</a>
 				</div>
 			</div>
 		</div>
 
-		<section class="max-w-screen-lg mx-auto mt-10 px-5 md:px-0">
+		<section class="max-w-screen-lg mx-auto mt-10 px-5 lg:px-0">
 			<Destacados></Destacados>
 		</section>
 
-		<section class="max-w-screen-lg mx-auto mt-10 px-5 md:px-0 h-[120px]">
+		<section class="max-w-screen-lg mx-auto mt-14 px-5 lg:px-0 h-[120px]">
 			<Noticias client:load></Noticias>
 		</section>
 
 		<!-- Planes destacados -->
-		<section class="w-full relative mt-20">
+		<section class="w-full relative mt-28">
 			<PlanesDestacados client:load></PlanesDestacados>
 		</section>
 
@@ -44,7 +44,7 @@ import Bento from '../components/Bento.astro';
 			<Experiencias></Experiencias>
 		</section>
 
-		<section class="max-w-screen-lg mx-auto mt-10 px-5 md:px-0 h-[120px">
+		<section class="max-w-screen-lg mx-auto mt-14 px-5 lg:px-0 h-[120px">
 			<Bento></Bento>
 		</section>
 
