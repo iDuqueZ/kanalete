@@ -35,11 +35,11 @@ export default function PlanesDestacados() {
                 <img src="/fondo2.png" alt="Fondo" className="w-60 h-60 md:w-80 md:h-80 object-cover" />
             </div>
 
-            <h2 className="text-xl font-semibold text-zinc-800 mb-4 max-w-screen-lg mx-auto px-5 md:px-0">
+            <h2 className="text-xl font-semibold text-zinc-800 mb-4 max-w-screen-lg mx-auto px-5 lg:px-0">
                 Planes destacados:
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-screen-lg mx-auto px-5 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-screen-lg mx-auto px-5 lg:px-0">
                 {loading ? (
                     Array.from({ length: 6 }).map((_, index) => (
                         <div key={index} className="bg-zinc-50 border-2 border-zinc-100 rounded-lg shadow-md">
