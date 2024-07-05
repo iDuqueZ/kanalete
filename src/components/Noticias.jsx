@@ -1,12 +1,4 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-// Import required modules
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Carousel } from "flowbite-react";
 
 // Import axios for API requests
 import axios from 'axios';
@@ -49,23 +41,20 @@ export default function noticias() {
         <h2 className="text-xl font-semibold text-zinc-800 mb-4">
             Noticias destacadas:
         </h2>
-      <Swiper navigation={true} loop={true} modules={[Autoplay, Navigation]} 
-        autoplay={{
-          delay: 6500,
-          disableOnInteraction: false,
-        }}
-        className="mySwiper">
+        <div className="h-32 sm:h-32 xl:h-32 2xl:h-32">
+        <Carousel slideInterval={5000} indicators={false}>
         {banners.map((banner, index) => (
-          <SwiperSlide key={index}>
-          <div className='banner-container hidden md:block'>
-            <img className='banner-image object-cover' src={banner} alt={`Banner ${index + 1}`} />
+          <div>
+            <div className='banner-container hidden md:block'>
+              <img className='banner-image object-cover' src={banner} alt={`Banner ${index + 1}`} />
+            </div>
+            <div className='banner-container md:hidden'>
+              <img className='banner-image object-cover mx-auto' src={bannersMobile[index]} alt={`Banner ${index + 1}`} />
+            </div>
           </div>
-          <div className='banner-container md:hidden'>
-            <img className='banner-image object-cover mx-auto' src={bannersMobile[index]} alt={`Banner ${index + 1}`} />
-          </div>
-          </SwiperSlide>
         ))}
-      </Swiper>
+      </Carousel>
+      </div>
     </>
   );
 }
